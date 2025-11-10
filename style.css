@@ -1,0 +1,121 @@
+/* Reset et style global */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s;
+}
+
+/* Thèmes clair et sombre */
+body.theme-light {
+  background: url('images/fond-clair-simule.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #111;
+}
+
+body.theme-dark {
+  background: url('images/fond-sombre-simule.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Barre latérale */
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: rgba(20,20,20,0.85);
+  color: #fff;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+
+#sidebar .sidebar-header {
+  text-align: center;
+  padding: 20px;
+}
+
+#sidebar-logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+#sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#sidebar nav ul li a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Contenu principal */
+#main {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+#main.shifted {
+  margin-left: 250px;
+}
+
+/* Top bar */
+#top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-bar {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+#new-page-btn img {
+  width: 24px;
+  cursor: pointer;
+}
+
+/* Liens accueil */
+.links-home a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  margin: 10px;
+  text-decoration: none;
+  color: #ffcc00;
+}
+
+.links-home img {
+  width: 32px;
+  vertical-align: middle;
+}
+
+/* Exemple de page */
+.example-box {
+  border: 2px solid #ffcc00;
+  background: rgba(255,255,255,0.8);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
